@@ -1,12 +1,15 @@
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 
 ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "bruhImTheAdmin"
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "bizbanking_data.json")
-LOG_FILE = os.path.join(BASE_DIR, "bizbanking_register.log")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR.mkdir(exist_ok=True)
+DATA_FILE = DATA_DIR / "bizbanking_data.json"
+LOG_FILE = DATA_DIR / "bizbanking_register.log"
 
 
 class DataStore:
@@ -16,7 +19,7 @@ class DataStore:
         self.next_id = 1
 
     def load(self):
-        if not os.path.exists(DATA_FILE):
+        if not DATA_FILE.exists():
             self.seed()
             return
         try:

@@ -57,18 +57,17 @@ Build an interactive console banking app that practices:
 
 ```
 BizBankingApp/
-├── Main.py              # Run the app
-├── app.py               # Main application logic
-├── ui.py                # Console menus and input
-├── storage.py           # JSON file storage
-├── models/              # Phase 1 OOP classes
-│   ├── itransaction.py
-│   ├── customer.py
-│   ├── account.py
-│   ├── savings_account.py
-│   └── checking_account.py
-├── bizbanking_data.json # Saved customers (created at runtime)
-└── bizbanking_register.log
+├── main.py              # Run the app
+├── src/
+│   ├── app.py           # Main application logic
+│   ├── ui.py            # Console menus and input
+│   ├── storage.py       # JSON file storage
+│   └── models/          # Phase 1 OOP classes
+├── data/
+│   ├── bizbanking_data.json
+│   └── bizbanking_register.log
+├── docs/                # Flowcharts and guides
+└── visuals/             # Optional PNG exports from draw.io
 ```
 
 ---
@@ -84,7 +83,7 @@ BizBankingApp/
 
 ```bash
 cd BizBankingApp
-python Main.py
+python main.py
 ```
 
 Main screen:
@@ -121,16 +120,30 @@ You can also **Register** to create your own customer, then use the master menu.
 
 ## Data storage
 
-- `bizbanking_data.json` — customers, accounts, transactions  
-- `bizbanking_register.log` — registration log entries  
+- `data/bizbanking_data.json` — customers, accounts, transactions  
+- `data/bizbanking_register.log` — registration log entries  
 
-Copy the project folder (including the JSON file) to move data to another machine.
+Copy the project folder (including the `data/` folder) to move data to another machine.
 
 ---
 
 ## OOP in practice
 
 When you deposit, withdraw, or transfer, the app builds a `SavingsAccount` or `CheckingAccount` object and calls its methods. Each account type applies its own **withdraw** rules (polymorphism), then prints a receipt via `ITransaction`.
+
+---
+
+## Documentation
+
+Flowcharts, architecture, and phase mapping:
+
+- [docs/README.md](docs/README.md) — index  
+- [docs/DRAWIO-GUIDE.md](docs/DRAWIO-GUIDE.md) — draw.io instructions + step-by-step app flow  
+- [docs/THOUGHT-FLOW.md](docs/THOUGHT-FLOW.md) — Mermaid flowcharts (GitHub renders these)  
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — modules and class diagram  
+- [docs/DATA-FLOW.md](docs/DATA-FLOW.md) — JSON vs OOP objects  
+- [docs/PHASE-GUIDE.md](docs/PHASE-GUIDE.md) — student guide steps 1–13  
+- [docs/diagrams/bizbanking-thought-flow.drawio](docs/diagrams/bizbanking-thought-flow.drawio) — edit in [draw.io](https://app.diagrams.net/) (File → Open)
 
 ---
 
