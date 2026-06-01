@@ -1,0 +1,13 @@
+{
+  "next_customer_id": 2,
+  "customers": [
+    {
+      "id": 1,
+      "name": "Kaushik Selvakumar",
+      "username": "ZYXERO",
+      "password": "@OfficialRulz1",
+      "accounts": []
+    }
+  ],
+  "transactions": []
+}
