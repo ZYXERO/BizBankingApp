@@ -66,8 +66,8 @@ BizBankingApp/
 ├── data/
 │   ├── bizbanking_data.json
 │   └── bizbanking_register.log
-├── docs/                # Flowcharts and guides
-└── visuals/             # Optional PNG exports from draw.io
+├── docs/                # FLOW.md (flowchart)
+└── visuals/             # Flowchart image
 ```
 
 ---
@@ -135,15 +135,7 @@ When you deposit, withdraw, or transfer, the app builds a `SavingsAccount` or `C
 
 ## Documentation
 
-Flowcharts, architecture, and phase mapping:
-
-- [docs/README.md](docs/README.md) — index  
-- [docs/DRAWIO-GUIDE.md](docs/DRAWIO-GUIDE.md) — draw.io instructions + step-by-step app flow  
-- [docs/THOUGHT-FLOW.md](docs/THOUGHT-FLOW.md) — Mermaid flowcharts (GitHub renders these)  
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — modules and class diagram  
-- [docs/DATA-FLOW.md](docs/DATA-FLOW.md) — JSON vs OOP objects  
-- [docs/PHASE-GUIDE.md](docs/PHASE-GUIDE.md) — student guide steps 1–13  
-- [docs/diagrams/bizbanking-thought-flow.drawio](docs/diagrams/bizbanking-thought-flow.drawio) — edit in [draw.io](https://app.diagrams.net/) (File → Open)
+- [docs/FLOW.md](docs/FLOW.md) — application flowchart
 
 ---
 
