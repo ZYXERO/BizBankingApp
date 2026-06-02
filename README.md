@@ -1,6 +1,13 @@
 # BizBanking
 
-A terminal-based banking application built with Python. The project follows a step-by-step design: **OOP class blueprints**, **menu-driven banking operations**, and **input validation with transaction receipts**.
+A banking project with two deliverables:
+
+| Branch | What it is |
+|--------|------------|
+| `main` | Terminal console app (OOP, JSON storage) |
+| `bank-app-backend-api-service` | FastAPI REST API (in-memory, MVC-style layout) |
+
+This README covers the **console app**. For the **backend API**, see [docs/API.md](docs/API.md).
 
 ## Objective
 
@@ -57,7 +64,10 @@ Build an interactive console banking app that practices:
 
 ```
 BizBankingApp/
-├── main.py              # Run the app
+├── main.py              # Run the console app
+├── api_main.py          # Run the FastAPI app (API branch)
+├── api_service/         # API controllers, services, models, store
+├── requirements.txt     # fastapi, uvicorn (API branch)
 ├── src/
 │   ├── app.py           # Main application logic
 │   ├── ui.py            # Console menus and input
@@ -66,7 +76,7 @@ BizBankingApp/
 ├── data/
 │   ├── bizbanking_data.json
 │   └── bizbanking_register.log
-├── docs/                # FLOW.md (flowchart)
+├── docs/                # FLOW.md, API.md
 └── visuals/             # Flowchart image
 ```
 
@@ -74,17 +84,34 @@ BizBankingApp/
 
 ## Requirements
 
+**Console (`main`):**
+
 - Python 3.10+ (tested on 3.14)
-- No extra pip packages (stdlib only: `json`, `os`, `decimal`, `re`, etc.)
+- No extra pip packages (stdlib only)
+
+**API (`bank-app-backend-api-service`):**
+
+- Python 3.10+
+- `pip install -r requirements.txt` (FastAPI, Uvicorn)
 
 ---
 
-## How to run
+## How to run (console)
 
 ```bash
 cd BizBankingApp
 python main.py
 ```
+
+## How to run (API)
+
+```bash
+cd BizBankingApp
+pip install -r requirements.txt
+python -m uvicorn api_main:app --reload --host 127.0.0.1 --port 8000
+```
+
+Open `http://127.0.0.1:8000/docs` for Swagger. Full endpoint list: [docs/API.md](docs/API.md).
 
 Main screen:
 
@@ -135,7 +162,8 @@ When you deposit, withdraw, or transfer, the app builds a `SavingsAccount` or `C
 
 ## Documentation
 
-- [docs/FLOW.md](docs/FLOW.md) — application flowchart
+- [docs/FLOW.md](docs/FLOW.md) — console application flowchart
+- [docs/API.md](docs/API.md) — REST API reference (API branch)
 
 ---
 
