@@ -101,6 +101,12 @@ requirements.txt            # fastapi, uvicorn
 - Use **raw JSON** for POST and PUT; no body for DELETE
 - After a full server restart, seed ids are **1-4** for both customers and accounts
 
+## Service-layer tests
+
+- [TESTING.md](TESTING.md) — assertions, how to run `pytest`, green/red in Cursor
+- [TEST-CASES.md](TEST-CASES.md) — every test case in markdown tables
+- Code: `tests/` (run `pytest -v`)
+
 ## Branch
 
 Console app: `main`  

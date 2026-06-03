@@ -113,6 +113,8 @@ python -m uvicorn api_main:app --reload --host 127.0.0.1 --port 8000
 
 Open `http://127.0.0.1:8000/docs` for Swagger. Full endpoint list: [docs/API.md](docs/API.md).
 
+**Service-layer tests:** `pytest -v` — see [docs/TESTING.md](docs/TESTING.md) and [docs/TEST-CASES.md](docs/TEST-CASES.md).
+
 Main screen:
 
 - `1` or `login` — sign in  
@@ -164,6 +166,8 @@ When you deposit, withdraw, or transfer, the app builds a `SavingsAccount` or `C
 
 - [docs/FLOW.md](docs/FLOW.md) — console application flowchart
 - [docs/API.md](docs/API.md) — REST API reference (API branch)
+- [docs/TESTING.md](docs/TESTING.md) — pytest and assertions
+- [docs/TEST-CASES.md](docs/TEST-CASES.md) — test case catalog (markdown)
 
 ---
 
